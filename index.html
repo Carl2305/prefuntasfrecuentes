@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+        button .highlight {
+           color: #000; 
+        }
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-app">
+        <aside class="sidebar">
+            <div class="wrap-sidebar">
+                <p class="title mb-4">Categorías</p>
+                <ul class="category">
+                    <li><a href="#" class="active">Pre Desembolso</a></li>
+                    <li><a href="#">Vigencia Poder</a></li>
+                    <li><a href="#">Firmas electrónicas</a></li>
+                    <li><a href="#">Delivery Service</a></li>
+                    <li><a href="#">Garantías</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="content">
+            <div>
+                <input type="text" id="searchInput" placeholder="Buscar preguntas o respuestas..." />
+                <button onclick="buscarTexto()">Buscar</button>
+                <p id="resultMessage" style="color: red;"></p>
+            </div>
+            <p class="title text-left mb-2">
+                Preguntas y respuestas
+                <img src="https://mitsui-leasing.com/wp-content/uploads/2024/11/logo_mafperu_trasparent.png" width="150">
+            </p>
+
+            <div style="height: 70vh;overflow-y: auto;">
+                <section class="question-section" id="section-one">
+                    <div class="accordion" id="accordionExample">
+                        <div class="group-cards">
+                            <p class="sub-title">Auto nuevo</p>
+    
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingOne">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> 
+                                            ¿Cómo sé, qué contrato se eleva a escritura pública? 
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Si la unidad/unidades de la operación igualan o superan las 40 UIT (soles o su equivalente en dólares), ese contrato se debe elevar a escritura pública.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingTwo">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">
+                                            ¿Cuántos días tengo de plazo para entregar los contratos al proveedor una vez activada la operación?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>En el caso de firma presencial, se debe entregar al día siguiente de activada la operación.</li>
+                                            <li>En caso de firma electrónica, se tiene un plazo máximo de 7 días calendarios posterior a la activación.</li>
+                                            <li>En el caso de Delivery service, el proveedor IBR debe entregar los contratos a los otros proveedores en caso corresponda apenas el cliente termine de firmar.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+    
+    
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                                            aria-controls="collapseThree">
+                                            ¿Puedo firmar en mis operaciones el contrato de garantía como representante legal de MAF?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Solo se puede si cuentas con facultades inscritas en SUNARP y aparece tu nombre en el campo de firma, caso contrario solo podrán firmar las personas detalladas en dicho campo.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingFour">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+                                            aria-controls="collapseFour">
+                                            ¿Si apoyo a otro ejecutivo con la toma de firmas, debo visar los documentos a pesar que no es mi operación?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Es correcto, la persona que toma firmas al cliente es la encargada de visar los documentos, indistintamente que la operación le pertenezca a otro ejecutivo.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingFive">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseFive" aria-expanded="false"
+                                            aria-controls="collapseFive">
+                                            ¿Qué debo hacer si mi lector biométrico no lee la huella del cliente?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Se debe identificar el motivo como, por ejemplo: Huella maltratada, problemas de conexión o con Reniec, no es la persona.</li>
+                                            <li>En el caso de huella maltratada podemos usar firmas electrónicas porque la validación es biométrica facial y no habría inconveniente con la identificación del cliente.</li>
+                                            <li>En el caso de problemas de la conexión o de Reniec, se debe utilizar firmas electrónicas o Delivery service, ya que se debe contar siempre con una constancia de identificación de identidad de la persona que firma los documentos.</li>
+                                            <li>En el caso que la lectura biométrica dactilar y la biometría facial indicaran que no es la persona, podríamos suponer que se trata de un intento de suplantación.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+    
+                        <div class="group-cards">
+                            <p class="sub-title">Auto usado</p>
+    
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingSeven">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false"
+                                            aria-controls="collapseSeven">
+                                            ¿Cómo sé, qué contrato se eleva a escritura pública?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Si la unidad/unidades de la operación igualan o superan las 40 UIT (soles o su equivalente en dólares), ese contrato se debe elevar a escritura pública.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+    
+    
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingEight">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseEight" aria-expanded="false"
+                                            aria-controls="collapseEight">
+                                            ¿Cuántos días tengo de plazo para entregar los contratos al proveedor una vez activada la operación?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseEight" class="collapse" aria-labelledby="headingEight"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>En el caso de firma presencial, se debe entregar al día siguiente de activada la operación.</li>
+                                            <li>En el caso de firma electrónica, se debe entregar antes de la activación.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingNine">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseNine" aria-expanded="false"
+                                            aria-controls="collapseNine">
+                                            ¿Qué gestión adicional debo hacer cuando tengo una operación de auto usado?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseNine" class="collapse" aria-labelledby="headingNine"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body-app">
+                                        <ul style="list-style: none;">
+                                            <li>Enviar un correo de estudio de placas según proveedor:
+                                                <ul class="sub-list">
+                                                    <li>&nbsp;IBR: <span>katiana.cisneros@ibr.com.pe</span> y <span>operacionesmaf@ibr.com.pe</span></li>
+                                                    <li>&nbsp;Recsa: <span>katherine.vergara@recsa.com</span></li>
+                                                    <li>&nbsp;Total Check: <span>efaustor@totalcheck.pe</span> , <span>smosquera@totalcheck.pe</span> y <span>operacionesmaftck@totalcheck.pe</span></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                                                    
+                        </div>
+                        
+                    </div>
+                </section>
+    
+                <section class="question-section d-none" id="section-two">
+                    <div class="accordion" id="accordionExampleTwo">
+                        <div class="group-cards">
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingTen">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="true" aria-controls="collapseTen"> 
+                                            ¿Qué documentos se requieren para validar facultades?
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseTen" class="collapse show" aria-labelledby="headingTen"
+                                    data-parent="#accordionExampleTwo">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Vigencia poder.</li>
+                                            <li>Copia literal.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingEleven">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false"
+                                            aria-controls="collapseEleven">
+                                            ¿Qué antigüedad deben tener la vigencia poder o copia literal a revisar?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven"
+                                    data-parent="#accordionExampleTwo">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Para Lima hasta 3 meses de antigüedad.</li>
+                                            <li>Para provincia hasta 1 mes de antigüedad.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingTwelve">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="false"
+                                            aria-controls="collapseTwelve">
+                                            ¿Qué poderes se requiere para una persona jurídica?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve"
+                                    data-parent="#accordionExampleTwo">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Suscribir, girar, emitir, aceptar, firmar pagarés o toda clase de títulos valores.</li>
+                                            <li>Celebrar contratos de crédito o préstamos en general.</li>
+                                            <li>Constituir garantía mobiliaria, prendar o gravar bienes muebles.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingThirteen">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseThirteen" aria-expanded="false"
+                                            aria-controls="collapseThirteen">
+                                            ¿Qué poderes se requiere en un “Compra para” de persona natural a persona jurídica?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen"
+                                    data-parent="#accordionExampleTwo">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Suscribir, girar, emitir, aceptar, firmar pagarés o toda clase de títulos valores.</li>
+                                            <li>Constituir garantía mobiliaria, prendar o gravar bienes muebles.</li>
+                                            <li>Prestar aval y otorgar fianza a favor de sí mismo (Si el titular del crédito y RRLL son la misma persona).</li>
+                                            <li>Prestar aval y otorgar fianza a favor de terceros (Si el titular del crédito y RRLL son diferentes personas).</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingFourteen">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseFourteen" aria-expanded="false"
+                                            aria-controls="collapseFourteen">
+                                            ¿Qué poderes se requiere en un “Compra para” de Persona jurídica a persona natural?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseFourteen" class="collapse" aria-labelledby="headingFourteen"
+                                    data-parent="#accordionExampleTwo">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Suscribir, girar, emitir, aceptar, firmar pagarés o toda clase de títulos valores.</li>
+                                            <li>Celebrar contratos de crédito o préstamos en general.</li>
+                                            <li>Constituir garantía mobiliaria, prendar o gravar bienes muebles.</li>
+                                            <li>Prestar aval y otorgar fianza a favor de sí mismo (Si el titular del crédito y RRLL son la misma persona).</li>
+                                            <li>Prestar aval y otorgar fianza a favor de terceros (Si el titular del crédito y RRLL son diferentes personas).</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingFifteen">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseFifteen" aria-expanded="false"
+                                            aria-controls="collapseFifteen">
+                                            ¿Qué poderes se requiere para una persona natural que otorga poder a otra persona natural?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseFifteen" class="collapse" aria-labelledby="headingFifteen"
+                                    data-parent="#accordionExampleTwo">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Suscribir, girar, emitir, aceptar, firmar pagarés o toda clase de títulos valores.</li>
+                                            <li>Celebrar contratos de crédito o préstamos en general.</li>
+                                            <li>Constituir garantía mobiliaria, prendar o gravar bienes muebles.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </section>
+    
+                <section class="question-section d-none" id="section-three">
+                    <div class="accordion" id="accordionExampleThree">
+                        <div class="group-cards">
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingSixteen">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseSixteen" aria-expanded="true" aria-controls="collapseSixteen"> 
+                                            ¿En qué productos puedo usar firmas electrónicas?
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseSixteen" class="collapse show" aria-labelledby="headingSixteen"
+                                    data-parent="#accordionExampleThree">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Crédito vehicular.</li>
+                                            <li>Préstamo personal.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingSeventeen">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseSeventeen" aria-expanded="false"
+                                            aria-controls="collapseSeventeen">
+                                            ¿En qué planes está restringido el uso de firmas electrónicas?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseSeventeen" class="collapse" aria-labelledby="headingSeventeen"
+                                    data-parent="#accordionExampleThree">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Planes que tengan la condición de garantía adelantada.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingEighteen">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseEighteen" aria-expanded="false"
+                                            aria-controls="collapseEighteen">
+                                            ¿Se puede usar el mismo correo electrónico para diferentes participantes de la misma operación?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseEighteen" class="collapse" aria-labelledby="headingEighteen"
+                                    data-parent="#accordionExampleThree">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>No, cada participante a firmar debe brindar su correo personal.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingNineteen">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseNineteen" aria-expanded="false"
+                                            aria-controls="collapseNineteen">
+                                            ¿Cuántos archivos PDF se cargan a la plataforma de firmas electrónicas?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseNineteen" class="collapse" aria-labelledby="headingNineteen"
+                                    data-parent="#accordionExampleThree">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Tres (pagaré, desgravamen y consolidado del resto de documentos).</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingTwenty">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseTwenty" aria-expanded="false"
+                                            aria-controls="collapseTwenty">
+                                            ¿Las firmas electrónicas aplican para clientes peruanos y extranjeros?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwenty" class="collapse" aria-labelledby="headingTwenty"
+                                    data-parent="#accordionExampleThree">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Si, siempre que tengan DNI o CE vigentes.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingTwentyOne">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseTwentyOne" aria-expanded="false"
+                                            aria-controls="collapseTwentyOne">
+                                            ¿Qué documentos se deben regularizar con firma manuscrita?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwentyOne" class="collapse" aria-labelledby="headingTwentyOne"
+                                    data-parent="#accordionExampleThree">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>El contrato de garantía.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingTwentyTwo">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseTwentyTwo" aria-expanded="false"
+                                            aria-controls="collapseTwentyTwo">
+                                            ¿Cuántos días de plazo se tiene para regularizar el contrato de garantía?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwentyTwo" class="collapse" aria-labelledby="headingTwentyTwo"
+                                    data-parent="#accordionExampleThree">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Siete días calendarios.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingTwentyThree">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseTwentyThree" aria-expanded="false"
+                                            aria-controls="collapseTwentyThree">
+                                            ¿Puedo regularizar con firma electrónica algún documento observado en etapa de Pre-desembolso?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwentyThree" class="collapse" aria-labelledby="headingTwentyThree"
+                                    data-parent="#accordionExampleThree">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Si se puede.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </section>
+    
+                <section class="question-section d-none" id="section-four">
+                    <div class="accordion" id="accordionExampleFour">
+                        <div class="group-cards">
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingTwentyFour">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwentyFour" aria-expanded="true" aria-controls="collapseTwentyFour"> 
+                                            ¿Puedo utilizar en cualquier caso el Delivery service?
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseTwentyFour" class="collapse show" aria-labelledby="headingTwentyFour"
+                                    data-parent="#accordionExampleFour">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Si, no hay restricciones siempre y cuando haya cobertura en dicha zona.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingTwentyFive">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseTwentyFive" aria-expanded="false"
+                                            aria-controls="collapseTwentyFive">
+                                            ¿Cuáles son los lugares que cuentan con cobertura de Delivery service?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwentyFive" class="collapse" aria-labelledby="headingTwentyFive"
+                                    data-parent="#accordionExampleFour">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Lima, Callao, Arequipa, Cajamarca, Cusco, Huánuco, Huancayo, Trujillo, Chimbote, Chiclayo, Piura, Cerro de Pasco, Tarapoto, Jaén, Moquegua, Juliaca, Huamanga, Cañete (bajo cotización), Chachapoyas, Huaraz, Ica.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingTwentySix">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseTwentySix" aria-expanded="false"
+                                            aria-controls="collapseTwentySix">
+                                            ¿A que correo puedo asignar las firmas del Delivery service?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwentySix" class="collapse" aria-labelledby="headingTwentySix"
+                                    data-parent="#accordionExampleFour">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li><span style="text-decoration: underline;">tomadefirmas@mafperu.com.</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingTwentySeven">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseTwentySeven" aria-expanded="false"
+                                            aria-controls="collapseTwentySeven">
+                                            ¿El Delivery service puede usarse para regularización de firmas electrónicas?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwentySeven" class="collapse" aria-labelledby="headingTwentySeven"
+                                    data-parent="#accordionExampleFour">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Si.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </section>
+    
+                <section class="question-section d-none" id="section-five">
+                    <div class="accordion" id="accordionExampleFive">
+                        <div class="group-cards">
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingTwentyEight">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwentyEight" aria-expanded="true" aria-controls="collapseTwentyEight"> 
+                                            ¿Qué puede ser enviado a dicho buzón?
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseTwentyEight" class="collapse show" aria-labelledby="headingTwentyEight"
+                                    data-parent="#accordionExampleFive">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Consultas sobre el trámite de constitución de garantía.</li>
+                                            <li>Trámite de cancelación de garantía.</li>
+                                            <li>Cambios de unidad (post activación).</li>
+                                            <li>Cesión de posición contractual.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <p class="sub-title" style="font-size: 28px;">Trámite de constitución de garantía</p>
+                            <p class="sub-title">Conceptos generales</p>
+
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingTwentyNine">
+                                    <h2 class="mb-0">
+                                        <button  class="btn btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseTwentyNine" aria-expanded="false"
+                                        aria-controls="collapseTwentyNine"> 
+                                            Formato de envió por cambio de unidad
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseTwentyNine" class="collapse" aria-labelledby="headingTwentyNine"
+                                data-parent="#accordionExampleFive">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Buzón de atención: <span style="text-decoration: underline;">garantias@mafperu.com</span></li>
+                                            <li>Asunto de correo: <strong>TRAMITE GARANTIA – CLIENTE XXXXXXXXXXX – OP XXXXX</strong></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingThirty">
+                                    <h2 class="mb-0">
+                                        <button  class="btn btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseThirty" aria-expanded="false"
+                                        aria-controls="collapseThirty"> 
+                                            ¿En una garantía MAF es el dueño del vehículo?
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseThirty" class="collapse" aria-labelledby="headingThirty"
+                                data-parent="#accordionExampleFive">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>No, MAF participa como acreedor más no es propietario de la unidad.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingThirtyOne">
+                                    <h2 class="mb-0">
+                                        <button  class="btn btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseThirtyOne" aria-expanded="false"
+                                        aria-controls="collapseThirtyOne"> 
+                                            ¿Quiénes participan en la constitución de garantía?
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseThirtyOne" class="collapse" aria-labelledby="headingThirtyOne"
+                                data-parent="#accordionExampleFive">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Constituyente: la persona, sea el deudor o un tercero, que constituye la garantía mobiliaria conforme a esta Ley. </li>
+                                            <li>Depositario: la persona natural o jurídica que custodia el bien mueble, materia de la garantía mobiliaria. </li>
+                                            <li>Deudor: la persona obligada al cumplimiento de la obligación garantizada. </li>
+                                            <li>Acreedor: la persona en cuyo favor se constituye la garantía mobiliaria. </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingThirtyTwo">
+                                    <h2 class="mb-0">
+                                        <button  class="btn btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseThirtyTwo" aria-expanded="false"
+                                        aria-controls="collapseThirtyTwo"> 
+                                        ¿Qué rol tienen nuestros clientes?
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseThirtyTwo" class="collapse" aria-labelledby="headingThirtyTwo"
+                                data-parent="#accordionExampleFive">
+                                    <div class="card-body-app">
+
+                                        <ul style="list-style: none;">
+                                            <li>Sin compra para:
+                                                <ul>
+                                                    <li>&nbsp;Deudor / Constituyente / Depositario: Cliente(es) cumple(n) el rol de los 3. </li>
+                                                </ul>
+                                            </li>
+                                            <li>Con compra para:
+                                                <ul>
+                                                    <li>&nbsp;Deudor: Cliente(es) quienes participan con sus ingresos y enfrentarán los pagos. </li>
+                                                    <li>&nbsp;Constituyente / Depositario: Garante mobiliario (PN/PJ quien será propietario del vehículo). </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingThirtyThree">
+                                    <h2 class="mb-0">
+                                        <button  class="btn btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseThirtyThree" aria-expanded="false"
+                                        aria-controls="collapseThirtyThree"> 
+                                        ¿Cuál es el plazo de calificación de un título? 
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseThirtyThree" class="collapse" aria-labelledby="headingThirtyThree"
+                                data-parent="#accordionExampleFive">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>El plazo de calificación es de 7 días hábiles contados desde el día siguiente de la presentación. </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingThirtyFour">
+                                    <h2 class="mb-0">
+                                        <button  class="btn btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseThirtyFour" aria-expanded="false"
+                                        aria-controls="collapseThirtyFour"> 
+                                        ¿Qué plazo otorga MAF para presentar el contrato y solicitar la constitución de garantía?  
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseThirtyFour" class="collapse" aria-labelledby="headingThirtyFour"
+                                data-parent="#accordionExampleFive">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>El contrato de garantía o parte notarial se ingresa al Registro a los 20 días calendarios después de la activación, si se detecta placa antes de este plazo, se ingresa al día siguiente de ubicar la placa.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingThirtyFive">
+                                    <h2 class="mb-0">
+                                        <button  class="btn btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseThirtyFive" aria-expanded="false"
+                                        aria-controls="collapseThirtyFive"> 
+                                        ¿Todos los ingresos se realizar en Lima?  
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseThirtyFive" class="collapse" aria-labelledby="headingThirtyFive"
+                                data-parent="#accordionExampleFive">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Correcto</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingThirtySix">
+                                    <h2 class="mb-0">
+                                        <button  class="btn btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseThirtySix" aria-expanded="false"
+                                        aria-controls="collapseThirtySix"> 
+                                        ¿Puedo como ejecutivo hacer seguimiento a la inscripción de un título?
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseThirtySix" class="collapse" aria-labelledby="headingThirtySix"
+                                data-parent="#accordionExampleFive">
+                                    <div class="card-body-app">
+                                        <ul style="list-style: none;">
+                                            <li>Correcto, la plataforma pública de Sunarp “síguelo”
+                                                <ul class="sub-list">
+                                                    <li>&nbsp;Link: <a href="https://siguelo.sunarp.gob.pe/siguelo/" target="_blank">https://siguelo.sunarp.gob.pe/siguelo/</a></li>
+                                                    <li>&nbsp;Oficina Registral: Lima</li>
+                                                    <li>&nbsp;Año del título: Lo proporciona GPG</li>
+                                                    <li>&nbsp;Número de título:  Lo proporciona GPG</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="sub-title">Garantía adelantada</p>
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingThirtySeven">
+                                    <h2 class="mb-0">
+                                        <button  class="btn btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseThirtySeven" aria-expanded="false"
+                                        aria-controls="collapseThirtySeven"> 
+                                        ¿Qué es una garantía adelantada o conocida como garantía pre constituida?
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseThirtySeven" class="collapse" aria-labelledby="headingThirtySeven"
+                                data-parent="#accordionExampleFive">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>La garantía mobiliaria pre constituida es una medida preventiva para asegurar obligaciones futuras mediante la constitución anticipada de una garantía sobre el bien materia del crédito.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingThirtyEight">
+                                    <h2 class="mb-0">
+                                        <button  class="btn btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseThirtyEight" aria-expanded="false"
+                                        aria-controls="collapseThirtyEight"> 
+                                        ¿En que registro se inscribe la pre constitución de garantía?
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseThirtyEight" class="collapse" aria-labelledby="headingThirtyEight"
+                                data-parent="#accordionExampleFive">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>En el Registro Mobiliario de Contratos que es donde se inscriben las garantías mobiliarias y demás actos inscribibles sobre bienes muebles no registrados en algún Registro de Bienes.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingThirtyNine">
+                                    <h2 class="mb-0">
+                                        <button  class="btn btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseThirtyNine" aria-expanded="false"
+                                        aria-controls="collapseThirtyNine"> 
+                                        ¿Cuándo se aplica la garantía adelantada?
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseThirtyNine" class="collapse" aria-labelledby="headingThirtyNine"
+                                data-parent="#accordionExampleFive">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Planes 50/50.</li>
+                                            <li>Casos de estado civil no actualizado.</li>
+                                            <li>Excepciones brindadas por GPG según análisis de riesgo de nuestra garantía.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingForty">
+                                    <h2 class="mb-0">
+                                        <button  class="btn btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseForty" aria-expanded="false"
+                                        aria-controls="collapseForty"> 
+                                        ¿Si se inscribe la garantía pre constituida ya tenemos inscrita la constitución?
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseForty" class="collapse" aria-labelledby="headingForty"
+                                data-parent="#accordionExampleFive">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>No, es imprescindible que se culmine con trámite de inmatriculación para que pueda trasladarse al Registro de propiedad vehicular y surtan los efectos jurídicos.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingFortyOne">
+                                    <h2 class="mb-0">
+                                        <button  class="btn btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseFortyOne" aria-expanded="false"
+                                        aria-controls="collapseFortyOne"> 
+                                        ¿Cuál es procedimiento y plazos? 
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseFortyOne" class="collapse" aria-labelledby="headingFortyOne"
+                                data-parent="#accordionExampleFive">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>MAF, tendrá prioridad en la presentación del contrato de garantía a través de sus proveedores quedando como 2do acto el trámite de inmatriculación.</li>
+                                            <li>El plazo de ingreso es: Lima (2días hábiles) y Provincia (4 días hábiles) post activación. </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingFortyTwo">
+                                    <h2 class="mb-0">
+                                        <button  class="btn btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseFortyTwo" aria-expanded="false"
+                                        aria-controls="collapseFortyTwo"> 
+                                        ¿Qué rol cumplo como ejecutivo comercial? 
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseFortyTwo" class="collapse" aria-labelledby="headingFortyTwo"
+                                data-parent="#accordionExampleFive">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Dar aviso al concesionario que el caso será activado con Garantía Adelantada para DLR espere el plazo establecido. </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="sub-title">Inmatriculación</p>
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingFortyThree">
+                                    <h2 class="mb-0">
+                                        <button  class="btn btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseFortyThree" aria-expanded="false"
+                                        aria-controls="collapseFortyThree"> 
+                                        ¿Por qué se observan los trámites de inmatriculación?
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseFortyThree" class="collapse" aria-labelledby="headingFortyThree"
+                                data-parent="#accordionExampleFive">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Ocurre porque Sunarp se rige por un principio registral que implica calificar los títulos según el momento exacto de su presentación, basándose en el día, hora, minuto y segundo, de esa manera tiene preferencia el ingresado con anterioridad. </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingFortyFour">
+                                    <h2 class="mb-0">
+                                        <button  class="btn btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseFortyFour" aria-expanded="false"
+                                        aria-controls="collapseFortyFour"> 
+                                        ¿Qué plazo otorga MAF al DLR para culminar con trámite de inmatriculación?
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseFortyFour" class="collapse" aria-labelledby="headingFortyFour"
+                                data-parent="#accordionExampleFive">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Los concesionarios cuentan con 20 días para culminar con dicho trámite, contados desde el día siguiente de la activación, excepto los casos que son activados con garantía adelantada. </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingFortyFive">
+                                    <h2 class="mb-0">
+                                        <button  class="btn btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseFortyFive" aria-expanded="false"
+                                        aria-controls="collapseFortyFive"> 
+                                        ¿Si el cliente declara estado civil distinto al concesionario?
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseFortyFive" class="collapse" aria-labelledby="headingFortyFive"
+                                data-parent="#accordionExampleFive">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Ejecutivo comercial al recibir dicho aviso debe notificar inmediatamente el buzón de garantías, ya que, es probable que no podamos constituir nuestra garantía. </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingFortySix">
+                                    <h2 class="mb-0">
+                                        <button  class="btn btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseFortySix" aria-expanded="false"
+                                        aria-controls="collapseFortySix"> 
+                                        ¿Qué obligación tiene el concesionario?
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseFortySix" class="collapse" aria-labelledby="headingFortySix"
+                                data-parent="#accordionExampleFive">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>El DLR debe realizar la inmatriculación de acuerdo con la información detallada en la carta de características, en caso de existir discrepancias, debe informarlas de manera inmediata. <br> Asimismo, asume la responsabilidad por los gastos derivados de observaciones debido a errores en el proceso que perjudiquen o retrasen nuestro trámite de constitución de garantía.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="sub-title">Rutas recomendadas en sistema</p>
+
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingFortySeven">
+                                    <h2 class="mb-0">
+                                        <button  class="btn btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseFortySeven" aria-expanded="false"
+                                        aria-controls="collapseFortySeven"> 
+                                        ¿Cómo puedo saber el proveedor al que pertenece el caso?
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseFortySeven" class="collapse" aria-labelledby="headingFortySeven"
+                                data-parent="#accordionExampleFive">
+                                    <div class="card-body-app">
+                                        <ul style="list-style: none;">
+                                            <li>Ruta: <strong>Inicio >> Menú de consultas básicas >> Consulta de operaciones vehiculares</strong> 
+                                                <ol>
+                                                    <li>&nbsp;Se coloca nro de Op.</li>
+                                                    <li>&nbsp;Estado: Si es una Op cancelada se busca con el código 99, de lo contrario con 0.</li>
+                                                    <li>&nbsp;Seleccionar <br>
+                                                        <img src="./img/img_uno.png" style="width: -webkit-fill-available; max-width: 900px;">
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingFortyEight">
+                                    <h2 class="mb-0">
+                                        <button  class="btn btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseFortyEight" aria-expanded="false"
+                                        aria-controls="collapseFortyEight"> 
+                                        ¿Cómo sé el tipo de trámite incluido en el financiamiento?
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseFortyEight" class="collapse" aria-labelledby="headingFortyEight"
+                                data-parent="#accordionExampleFive">
+                                    <div class="card-body-app">
+                                        <ul style="list-style: none;">
+                                            <li>Ruta: <strong>Inicio >> Bandeja de tareas >> Consulta de solicitudes</strong> 
+                                                <ol>
+                                                    <li>&nbsp;Se ingresa nro. De solicitud.</li>
+                                                    <li>&nbsp;Seleccionar <br>
+                                                        <img src="./img/img_dos.png" style="width: -webkit-fill-available; max-width: 900px;"> <br>
+                                                        Dirigirse a la sección de condiciones de financiamiento <br>
+                                                        <img src="./img/img_tres.png" style="width: -webkit-fill-available; max-width: 900px;">                                                         
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="sub-title">Cancelación de garantía</p>
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingFortyNine">
+                                    <h2 class="mb-0">
+                                        <button  class="btn btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseFortyNine" aria-expanded="false"
+                                        aria-controls="collapseFortyNine"> 
+                                            Formato de envió por cambio de unidad
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseFortyNine" class="collapse" aria-labelledby="headingFortyNine"
+                                data-parent="#accordionExampleFive">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Buzón de atención: <span style="text-decoration: underline;">garantias@mafperu.com</span></li>
+                                            <li>Asunto de correo: 
+                                                <strong>
+                                                    LEV NO FINANCIADO – CLIENTE XXXXXXXXXXX  – OP XXXXX <br>
+                                                    LEV FINANCIADO – CLIENTE XXXXXXXXXXX  – OP XXXXX
+                                               </strong>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingFifty">
+                                    <h2 class="mb-0">
+                                        <button  class="btn btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseFifty" aria-expanded="false"
+                                        aria-controls="collapseFifty"> 
+                                        ¿Cuántos son los tipos que maneja MAF?
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseFifty" class="collapse" aria-labelledby="headingFifty"
+                                data-parent="#accordionExampleFive">
+                                    <div class="card-body-app">
+                                        <ol>
+                                            <li>Cancelación de garantía financiada (no consumo)
+                                                <ul>
+                                                    <li>&nbsp;Uso: Comercial, Alquiler, Taxi, TPU, TPI.</li>
+                                                    <li>&nbsp;Tipo de gastos: Financiados dentro del crédito.</li>
+                                                    <li>&nbsp;Encargado de trámite: Proveedor de garantías.</li>
+                                                </ul>
+                                            </li>
+                                            <li>Cancelación de garantía no financiada (consumo)
+                                                <ul>
+                                                    <li>&nbsp;Uso: Particular</li>
+                                                    <li>&nbsp;Tipo de gastos: No Financiados dentro del crédito.</li>
+                                                    <li>&nbsp;Precio: A cargo del cliente.</li>
+                                                    <li>&nbsp;Encargado de trámite: Proveedor o Cliente (personal).</li>
+                                                    <li>&nbsp;Cliente tiene 2 opciones:
+                                                        <ul style="list-style: lower-alpha;">
+                                                            <li>A cargo de proveedor: El cliente realiza un pago al proveedor para iniciar el trámite, quien se encarga de su gestión posterior.</li>
+                                                            <li>A cargo del cliente: El cliente asume la total responsabilidad del trámite, el proveedor de MAF coordinará la entrega de la carta de cancelación firmada por nuestro representante para las demás acciones.</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="sub-title">Cambio de unidad (post activación)</p>
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingFiftyOne">
+                                    <h2 class="mb-0">
+                                        <button  class="btn btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseFiftyOne" aria-expanded="false"
+                                        aria-controls="collapseFiftyOne"> 
+                                            Formato de envió por cambio de unidad
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseFiftyOne" class="collapse" aria-labelledby="headingFiftyOne"
+                                data-parent="#accordionExampleFive">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Buzón de atención: <span style="text-decoration: underline;">garantias@mafperu.com</span></li>
+                                            <li>Asunto de correo: <strong> CAMBIO DE UNIDAD – CLIENTE XXXXXXXXXXX  – OP XXXXX</strong></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingFiftyTwo">
+                                    <h2 class="mb-0">
+                                        <button  class="btn btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseFiftyTwo" aria-expanded="false"
+                                        aria-controls="collapseFiftyTwo"> 
+                                        Requisitos
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseFiftyTwo" class="collapse" aria-labelledby="headingFiftyTwo"
+                                data-parent="#accordionExampleFive">
+                                    <div class="card-body-app">
+                                        <ol>
+                                            <li>El precio de la nueva unidad, debe mantenerse, de lo contrario <strong>NO PROCEDE</strong>.</li>
+                                            <li>Se debe adjuntar la nueva carta de características la cual debe incluir:
+                                                <ul>
+                                                    <li>Datos del vehículo</li>
+                                                    <li>Motivo del cambio</li>
+                                                    <li>Responsable de pagos</li>
+                                                    <li>Constancia de abono <strong>(*)</strong>
+                                                        <br>(*) GPG informará los montos y cuentas de destino
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingFiftyThree">
+                                    <h2 class="mb-0">
+                                        <button  class="btn btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseFiftyThree" aria-expanded="false"
+                                        aria-controls="collapseFiftyThree"> 
+                                        ¿Qué sucede si no cumplo con requisitos? 
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseFiftyThree" class="collapse" aria-labelledby="headingFiftyThree"
+                                data-parent="#accordionExampleFive">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>GPG no detendrá trámite de constitución de garantía.</li>
+                                            <li>GPG no iniciará coordinaciones con proveedor.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-app">
+                                <div class="card-header-app" id="headingFiftyFour">
+                                    <h2 class="mb-0">
+                                        <button  class="btn btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseFiftyFour" aria-expanded="false"
+                                        aria-controls="collapseFiftyFour"> 
+                                        ¿Qué debo tener en cuenta?
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseFiftyFour" class="collapse" aria-labelledby="headingFiftyFour"
+                                data-parent="#accordionExampleFive">
+                                    <div class="card-body-app">
+                                        <ul>
+                                            <li>Es responsabilidad del ejecutivo comercial, dar aviso al área de Seguros.</li>
+                                            <li>En caso sea necesario adenda, este cumplirá formalidad inicial (contrato legalizado o escritura pública).</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                </section>
+    
+            </div>
+        </main>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+        <script>
+            var ID_SECTION = '';
+
+            const clarSearch = () => {
+                const sections = document.querySelectorAll('.question-section'); // Selecciona todas las secciones
+
+                sections.forEach(section => {
+                    const cards = section.querySelectorAll('.card-app');
+
+                    // Colapsar todos los card-app y agregar clase "collapsed" al botón
+                    cards.forEach(card => {
+                        const collapseElement = card.querySelector('.collapse');
+                        const buttonElement = card.querySelector('button');
+
+                        collapseElement.classList.remove('show'); // Cierra el colapso
+                        buttonElement.classList.add('collapsed'); // Añade la clase "collapsed"
+                        buttonElement.setAttribute('aria-expanded', 'false'); // Actualiza el atributo aria-expanded
+                    });
+                });
+
+                // Mostrar mensaje de "No se encontraron coincidencias"
+                const resultMessage = document.getElementById('resultMessage');
+                resultMessage.textContent = 'No se encontraron coincidencias.';
+            };
+
+
+
+            const buscarTexto = () => {
+                clarSearch();
+                const input = document.getElementById('searchInput').value.toLowerCase();
+                const section = document.getElementById(ID_SECTION);
+                const cards = section.querySelectorAll('.card-app');
+                let encontrado = false;
+
+                // Limpiar resultados anteriores
+                cards.forEach(card => {
+                    const preguntas = card.querySelectorAll('button');
+                    const respuestas = card.querySelectorAll('li');
+
+                    // Limpiar resaltados en preguntas y respuestas
+                    preguntas.forEach(p => p.innerHTML = p.innerHTML.replace(/<span class="highlight">(.*?)<\/span>/g, '$1'));
+                    respuestas.forEach(r => r.innerHTML = r.innerHTML.replace(/<span class="highlight">(.*?)<\/span>/g, '$1'));
+                });
+
+                // Si el input está vacío, colapsar todos los card-app
+                if (!input) {
+                    cards.forEach(card => {
+                        const collapseElement = card.querySelector('.collapse');
+                        const buttonElement = card.querySelector('button');
+
+                        // Colapsar el card y agregar clase "collapsed" al botón
+                        collapseElement.classList.remove('show');
+                        buttonElement.classList.add('collapsed');
+                        buttonElement.setAttribute('aria-expanded', 'false');
+                    });
+
+                    // Limpiar mensaje de búsqueda
+                    const resultMessage = document.getElementById('resultMessage');
+                    resultMessage.textContent = '';
+
+                    return; // Finalizar la función
+                }
+
+                // Buscar coincidencias y manejar el colapso
+                cards.forEach(card => {
+                    const pregunta = card.querySelector('button');
+                    const respuestas = card.querySelectorAll('li');
+                    let matchInCard = false;
+
+                    // Buscar coincidencias en la pregunta
+                    if (pregunta && pregunta.textContent.toLowerCase().includes(input)) {
+                        encontrado = true;
+                        matchInCard = true;
+                        const regex = new RegExp(`(${input})`, 'gi');
+                        pregunta.innerHTML = pregunta.innerHTML.replace(regex, '<span class="highlight">$1</span>');
+                    }
+
+                    // Buscar coincidencias en las respuestas
+                    respuestas.forEach(respuesta => {
+                        if (respuesta.textContent.toLowerCase().includes(input)) {
+                            encontrado = true;
+                            matchInCard = true;
+                            const regex = new RegExp(`(${input})`, 'gi');
+                            respuesta.innerHTML = respuesta.innerHTML.replace(regex, '<span class="highlight">$1</span>');
+                        }
+                    });
+
+                    // Expandir el card con coincidencias y colapsar los demás
+                    const collapseElement = card.querySelector('.collapse');
+                    const buttonElement = card.querySelector('button');
+                    if (matchInCard) {
+                        collapseElement.classList.add('show'); // Abre el colapso
+                        buttonElement.classList.remove('collapsed'); // Quita la clase "collapsed"
+                        buttonElement.setAttribute('aria-expanded', 'true'); // Actualiza el atributo aria-expanded
+                    } else {
+                        collapseElement.classList.remove('show'); // Cierra el colapso
+                        buttonElement.classList.add('collapsed'); // Añade la clase "collapsed"
+                        buttonElement.setAttribute('aria-expanded', 'false'); // Actualiza el atributo aria-expanded
+                    }
+                });
+
+                // Si no hay coincidencias, colapsar todos los card-app
+                if (!encontrado) {
+                    cards.forEach(card => {
+                        const collapseElement = card.querySelector('.collapse');
+                        const buttonElement = card.querySelector('button');
+
+                        // Colapsar el card y agregar clase "collapsed" al botón
+                        collapseElement.classList.remove('show');
+                        buttonElement.classList.add('collapsed');
+                        buttonElement.setAttribute('aria-expanded', 'false');
+                    });
+
+                    // Mostrar mensaje de "No se encontraron coincidencias"
+                    const resultMessage = document.getElementById('resultMessage');
+                    resultMessage.textContent = 'No se encontraron coincidencias.';
+                } else {
+                    // Limpiar el mensaje de "No se encontraron coincidencias" si hay resultados
+                    const resultMessage = document.getElementById('resultMessage');
+                    resultMessage.textContent = '';
+                }
+            }
+
+            
+            const showSection = (category) => {
+                const sectionLinks = document.querySelectorAll('.question-section');
+
+                // Oculta todas las secciones
+                sectionLinks.forEach(section => section.classList.add('d-none'));
+
+                // Muestra solo la sección correspondiente al índice 'category'
+                if (sectionLinks[category]) {
+                    sectionLinks[category].classList.remove('d-none');
+
+                    // Obtener el ID de la sección mostrada
+                    ID_SECTION = sectionLinks[category].id;
+                    console.log(`Sección mostrada: ${ID_SECTION}`);
+                }
+            };
+
+            // Selecciona todos los elementos de enlace dentro de la lista de categorías
+            const categoryLinks = document.querySelectorAll('.category li a');
+        
+            categoryLinks.forEach((link, index) => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault(); // Previene el comportamiento por defecto del enlace
+                    
+                    // Remueve la clase 'active' de todos los enlaces
+                    categoryLinks.forEach(link => link.classList.remove('active'));
+                    
+                    // Agrega la clase 'active' al enlace que fue clickeado
+                    this.classList.add('active');
+                    showSection(index);
+                    
+                });
+            });
+
+        </script>
+</body>
+
+</html>
