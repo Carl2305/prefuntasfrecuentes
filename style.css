@@ -68,6 +68,27 @@ body {
     padding-top: 1rem;
 }
 
+.input-seacrh {
+    height: 40px;
+    width: 350px;
+    color: #000000;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    outline-color: #EB0A1EB2;
+    margin-right: 2%;
+}
+
+.btn-search {
+    background: #EB0A1E;
+    border-radius: 8px;
+    color: #FFFFFF;
+    border: none;
+    height: 40px;
+    width: 100px;
+    font-size: 16px;
+}
+
 /* Selector para la barra de desplazamiento completa */
 ::-webkit-scrollbar {
     width: 12px; /* Ancho de la barra de desplazamiento */
